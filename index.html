@@ -241,6 +241,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro','Helvetica Neue',sans
   </div>
 </div>
 
+<!-- 8. Token Usage Table -->
+<div style="margin-bottom:24px">
+  <div class="section-header">
+    <span class="section-title">📊 Token Usage & Cost</span>
+    <div class="tab-group">
+      <button class="tab-btn active" id="uTabT" onclick="uTab='today';render()">Today</button>
+      <button class="tab-btn" id="uTab7" onclick="uTab='7d';render()">7 Days</button>
+      <button class="tab-btn" id="uTab30" onclick="uTab='30d';render()">30 Days</button>
+      <button class="tab-btn" id="uTabA" onclick="uTab='all';render()">All Time</button>
+    </div>
+  </div>
+  <div class="glass panel" style="overflow-x:auto">
+    <table class="dtable">
+      <thead><tr><th>Model</th><th class="r">Calls</th><th class="r">Input</th><th class="r">Output</th><th class="r">Cache</th><th class="r">Total</th><th class="r">Cost</th><th style="min-width:100px">Usage</th></tr></thead>
+      <tbody id="uBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 7. Active Sessions Panel -->
+<div style="margin-bottom:24px">
+  <div class="section-header"><span class="section-title">📡 Active Sessions</span><span class="section-count" id="sessCount"></span></div>
+  <div class="glass panel" style="overflow-x:auto;max-height:400px;overflow-y:auto">
+    <table class="dtable">
+      <thead><tr><th>Name</th><th>Model</th><th>Type</th><th>Context %</th><th>Last Activity</th><th class="r">Tokens</th></tr></thead>
+      <tbody id="sessBody"></tbody>
+    </table>
+  </div>
+</div>
 
 <!-- 5. Charts Section -->
 <div class="charts-section">
@@ -270,36 +299,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro','Helvetica Neue',sans
     <table class="dtable" id="cronTable">
       <thead><tr><th>Status</th><th>Name</th><th>Schedule</th><th>Last Run</th><th>Next Run</th><th class="r">Duration</th><th>Model</th></tr></thead>
       <tbody id="cronBody"></tbody>
-    </table>
-  </div>
-</div>
-
-<!-- 7. Active Sessions Panel -->
-<div style="margin-bottom:24px">
-  <div class="section-header"><span class="section-title">📡 Active Sessions</span><span class="section-count" id="sessCount"></span></div>
-  <div class="glass panel" style="overflow-x:auto;max-height:400px;overflow-y:auto">
-    <table class="dtable">
-      <thead><tr><th>Name</th><th>Model</th><th>Type</th><th>Context %</th><th>Last Activity</th><th class="r">Tokens</th></tr></thead>
-      <tbody id="sessBody"></tbody>
-    </table>
-  </div>
-</div>
-
-<!-- 8. Token Usage Table -->
-<div style="margin-bottom:24px">
-  <div class="section-header">
-    <span class="section-title">📊 Token Usage & Cost</span>
-    <div class="tab-group">
-      <button class="tab-btn active" id="uTabT" onclick="uTab='today';render()">Today</button>
-      <button class="tab-btn" id="uTab7" onclick="uTab='7d';render()">7 Days</button>
-      <button class="tab-btn" id="uTab30" onclick="uTab='30d';render()">30 Days</button>
-      <button class="tab-btn" id="uTabA" onclick="uTab='all';render()">All Time</button>
-    </div>
-  </div>
-  <div class="glass panel" style="overflow-x:auto">
-    <table class="dtable">
-      <thead><tr><th>Model</th><th class="r">Calls</th><th class="r">Input</th><th class="r">Output</th><th class="r">Cache</th><th class="r">Total</th><th class="r">Cost</th><th style="min-width:100px">Usage</th></tr></thead>
-      <tbody id="uBody"></tbody>
     </table>
   </div>
 </div>
